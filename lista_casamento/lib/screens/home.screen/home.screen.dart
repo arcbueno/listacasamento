@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lista_casamento/models/item_lista.dart';
 import 'package:lista_casamento/screens/home.screen/home.viewmodel.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -49,36 +50,84 @@ class _HomeScreenState extends State<HomeScreen> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
-                  'Esse site foi apenas uma forma com que a gente achou de facilitar a escolha de compras dos presentes para o nosso casamento. \nPartiu da idéia de tentar ajudar ambos os lados: os de quem irão nos ajudar nessa nova etapa, no caso vocês :P,  e o da gente, pra conseguir gerenciar bonitinho nossas coisas. \nEntendemos que durante essa pandemia muita coisa ocorreu, principalmente perda de emprego, então queriamos evitar que uma pessoa acabe gastando em nós mais do que ela pudesse. \nA gente já agradece só você abrir esse link :)',
+                  'Esse site foi apenas uma forma com que a gente achou de facilitar a escolha de compras dos presentes para o nosso casamento. \nPartiu da idéia de tentar ajudar ambos os lados: os de quem irão nos ajudar nessa nova etapa, no caso vocês :P,  e o da gente, pra conseguir gerenciar bonitinho.\nEntendemos que durante essa pandemia muita coisa ocorreu, então queriamos evitar que uma pessoa acabe gastando em nós mais do que ela pudesse.\nA gente já agradece só você abrir esse link :)',
                   style: TextStyle(fontSize: 24, color: Colors.white),
                   textAlign: TextAlign.center,
                 ),
               ),
-              Container(
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Colors.pink[100]!,
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Container(
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    border: Border.all(
+                      color: Colors.pink[100]!,
+                    ),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(20),
+                    ),
                   ),
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(20),
-                  ),
-                ),
-                child: StreamBuilder<List<ItemLista>>(
+                  child: StreamBuilder<List<ItemLista>>(
                     initialData: [],
                     stream: _viewModel.listaItensStream,
                     builder: (context, snapshot) {
                       var lista = snapshot.data ?? [];
-                      return ListView.builder(
-                        itemCount: lista.length,
-                        physics: NeverScrollableScrollPhysics(),
-                        shrinkWrap: true,
-                        itemBuilder: (context, index) {
-                          return ListTile(
-                            title: Text(lista[index].nome),
-                          );
-                        },
+                      return DataTable(
+                        columns: [
+                          DataColumn(
+                            label: Text(
+                              'Nome',
+                              style: TextStyle(fontSize: 18),
+                            ),
+                          ),
+                          DataColumn(
+                            label: Text(
+                              'Comodo',
+                              style: TextStyle(fontSize: 18),
+                            ),
+                          ),
+                          DataColumn(
+                            label: Text(
+                              'Link sugerido',
+                              style: TextStyle(fontSize: 18),
+                            ),
+                          ),
+                          DataColumn(
+                            label: Text(
+                              'Já reservado',
+                              style: TextStyle(fontSize: 18),
+                            ),
+                          ),
+                        ],
+                        rows: lista
+                            .map(
+                              (e) => DataRow(cells: [
+                                DataCell(
+                                  Text(e.nome),
+                                ),
+                                DataCell(
+                                  Text(e.comodo),
+                                ),
+                                DataCell(
+                                  InkWell(
+                                    onTap: () => launch(e.link),
+                                    child: Text(e.link),
+                                  ),
+                                ),
+                                DataCell(
+                                  Checkbox(
+                                    value: e.reservado,
+                                    onChanged: (bool? value) => print("aaa"),
+                                  ),
+                                ),
+                              ]),
+                            )
+                            .toList(),
                       );
-                    }),
+                    },
+                  ),
+                ),
               )
             ],
           ),
