@@ -35,7 +35,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: [
                   CircleAvatar(
                     radius: 250,
-                    backgroundImage: AssetImage('praia.jpg'),
+                    backgroundImage: NetworkImage(
+                        'https://i.ibb.co/CQ5Y0dH/20200829-164143.jpg'),
                     backgroundColor: Colors.transparent,
                   ),
                   Padding(
