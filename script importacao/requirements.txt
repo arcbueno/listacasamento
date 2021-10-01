@@ -1,0 +1,2 @@
+npm i firebase-admin
+npm i fast-csv

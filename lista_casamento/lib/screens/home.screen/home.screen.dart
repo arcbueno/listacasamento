@@ -78,13 +78,13 @@ class _HomeScreenState extends State<HomeScreen> {
                         columns: [
                           DataColumn(
                             label: Text(
-                              'Nome',
+                              'Cômodo',
                               style: TextStyle(fontSize: 18),
                             ),
                           ),
                           DataColumn(
                             label: Text(
-                              'Comodo',
+                              'Nome',
                               style: TextStyle(fontSize: 18),
                             ),
                           ),
@@ -105,15 +105,25 @@ class _HomeScreenState extends State<HomeScreen> {
                             .map(
                               (e) => DataRow(cells: [
                                 DataCell(
-                                  Text(e.nome),
-                                ),
-                                DataCell(
                                   Text(e.comodo),
                                 ),
                                 DataCell(
+                                  Text(e.nome),
+                                ),
+                                DataCell(
                                   InkWell(
-                                    onTap: () => launch(e.link),
-                                    child: Text(e.link),
+                                    onTap: e.link.isNotEmpty
+                                        ? () => launch(e.link)
+                                        : null,
+                                    child: Container(
+                                      width:
+                                          MediaQuery.of(context).size.width / 5,
+                                      child: Text(
+                                        e.link,
+                                        maxLines: 2,
+                                        overflow: TextOverflow.ellipsis,
+                                      ),
+                                    ),
                                   ),
                                 ),
                                 DataCell(

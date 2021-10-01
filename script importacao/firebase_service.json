@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "minha-lista-casamento",
+  "private_key_id": "b8d3ac471349191e4e9858f0fb3d993d010c6d13",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDLImOvhQBWuHiz\n69Nz2Q56IuJ3CvbIhp3KFmCh5YnW2aX2sGahh5f+FQPZpY3jioQDNrXJejmj00iF\notIppIgNhVJsE/wNArrsQHgn7Hny7lNBRyqrFE1O15G9yPjTT6zohsjsqML/tWZb\nmxmPciE7DZILj5FMFyhBPT8OmyrwE85TlRXiOSrf+5a/v95472yvSW66jcxxms6y\nzJ46Hj6RDv/5twXFp2sYuQ/98CSjXC3E788U2vvl30UWL7rsjhnRJyiGJxXNDDKC\ndyX1mRVQHhUU39Q3PS/f1jDJrTxDc6jSWbMN7swTuQgXOIetEn5H9oTEBN3JiPZO\n3O0a1YdhAgMBAAECggEAArUbIghCSGWeCjve7iDa/gq//Pky79pHeR2SPSYrj6cH\n/ME+JPIDNxo9mmWH/hvnBYnxo1VTNllHEqzoYzCztYZs4k7j4aKDLknvsAyJVZES\noACcU3pqS145LY/jrSFXOyQswma/bpwS2K65CP3q7ngQVcIcnCiE21W/JOkxidCb\nqUaPzWg9vk4yaQZaMLIX+WZKl4sywhWLfYvGW7c5ETZuswSMjOe1wGZG9PJc6qDH\nbNu58Xzn6cw3uelG95yhiMNkZnl0Pl9MwLsxYhvHHlBnvvqt4+lLOB6W8Zdqvr8/\nLAr5rKU9NZbTIGo0UtaYrSarYkigbxBb76sBoJaQAQKBgQD5uur2JSodSoPgT4P7\nVQL84HkUql8qKOKNnjzliIpO7YCieCSF14egpVxB7h+FBWCU4i9zY8LCDA8LT/y4\n3XCZ96z5toJUwFQe0Vzpnv+vO39NzbB4AC+hvwDbJ27x17Il3yS6WvsxJe8nZSv7\nj1N9ZvwnTpZIJ1BDvgXYZJu2YQKBgQDQO/zk/H8cE8zJkdxIPJrplQAgFTnUK53b\nEGFxoENCAvOl6PRdzO43JiEPWgPzld2wJRaUfD0up4NJandUcf+1qNk8xW29JOKJ\nNI/fDW4alkxoNZ9aSJVbTitVSaEav5PQ0qHuZ/M1SFai7ulO/2+5ANJZqZiTrD8l\nJlMcc1lxAQKBgQDYtz3516yheK3S9g46CL8sBfztUyB8rLhWX5DHPGOSNQdhdtNz\nFuQLJBVY3bWasVzsNxEomNVFokNX9NUC9KAn7Ui994VI2RLnH5b64lFOl1pVgX93\n0+mB+whaJvFfjGh79xafZh8AusO8s06k4u94Luv5jHhcK0m7T+cwr7Z1YQKBgHws\nmZVPgNkUcZVuFqc5BMPv54A6SB7e16ZvsTwZ7qGpsvOn5DkfYJqgcSx/aEXUg7tr\nknh/UdjFacPY6koAJRWGF+1mahdVrIVXQ8gmcRcHs46dE2a6S96D0dFtM9YIkjP/\ntzK86EpI1ekZgSVrq4ruE4IGYYcGOy2DGiKoIpkBAoGAKN9IXop861Qa0vzfzGJP\nt0SKtmy6tZRVrcgWkDYR3iagsgOa28AIUscA/7fS2OAVxrXkhJCQyEtGbDNKBG2s\nixdnBQXHQcccYu3XgaQcSCISqqBv/eHsni11SWjF9kdJYbs9cePzrViKRfecBAg4\nQL/ZT+Zn5Pe0CjWQHnHSaQY=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-srzc2@minha-lista-casamento.iam.gserviceaccount.com",
+  "client_id": "113415474267949532278",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-srzc2%40minha-lista-casamento.iam.gserviceaccount.com"
+}
